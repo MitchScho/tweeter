@@ -1,0 +1,34 @@
+
+.tweet-counter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+#tag {
+  font-family: 'Bungee', cursive;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  margin: 0;
+  border: none;
+}
+
+.text-input{
+  border-bottom: solid 3px #4056A1;
+  
+}
+
+texarea {
+  color: #545149;
+}
+
+#tweet-text {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+label {
+  padding-bottom: 4px
+}
