@@ -51,6 +51,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 4px;
+  font-weight: 300;
  }
 
  .article-foot {
@@ -75,11 +76,22 @@ body {
   margin-bottom: 0;
  }
 
- .tweet-container i {
+ #foot-icon i {
   padding: 4px;
   color:#4056A1;
  }
 
- .tweet-container i:hover {
+ #foot-icon i:hover {
   color: goldenrod;
  }
+
+ .handle {
+   color:#acc7ee;
+   font-weight: 600;
+ }
+
+ .icon-name {
+   font-size: 18px;
+ }
+
+ 
