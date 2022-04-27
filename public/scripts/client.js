@@ -31,10 +31,27 @@
 $(document).ready(function () {
 
   const createTweetElement = function (data) {
-    const $avatar = $(`<i class="fa fa-user" aria-hidden="true"></i>`);
-    const $name = $(`<span class="icon-name">Mitchell Schofield</span>`);
-    const $handle = $(`<span class="handle">@handle</span>`);
-    //const $tweet = $(`<article class="tweet">Hello world</article>`);
+    
+    const $tweet = $(`<section class="tweet-container">
+        <article>
+          <header class="article-head">
+            <div>
+              <i${user.avatars}></i>
+              <span class="icon-name">${user.name}</span>            
+            </div>            
+            <span class="handle">${user.handle}</span>
+          </header>
+          <p>${content.text}</p>
+          <footer class="article-foot">
+            <output class="day-count">${created_at}</output>
+            <div id="foot-icon">
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-bolt" aria-hidden="true"></i>
+            </div>
+          </footer>
+        </article>
+      </section>`);
     return $tweet;
   }
 

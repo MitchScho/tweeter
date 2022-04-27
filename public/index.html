@@ -61,14 +61,13 @@
           <header class="article-head">
             <div>
               <i class="fa fa-user" aria-hidden="true"></i>
-              <span class="icon-name">Mitchell Schofield</span>            
+              <span class="icon-name"><%=user.name%></span>            
             </div>            
-            <span class="handle">@handle</span>
+            <span class="handle"><%=user.handle%></span>
           </header>
-          <p>I'm baby umami readymade scenester williamsburg keffiyeh subway tile XOXO blue bottle yuccie. Migas before they sold out
-          knausgaard readymade lyft etsy biodiesel glossier.</p>
+          <p><%=content.text%></p>
           <footer class="article-foot">
-            <output class="day-count">10 days ago</output>
+            <output class="day-count"><%=created_at%>></output>
             <div id="foot-icon">
               <i class="fa fa-thumbs-up" aria-hidden="true"></i>
               <i class="fa fa-heart" aria-hidden="true"></i>
