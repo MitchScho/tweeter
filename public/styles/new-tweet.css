@@ -15,11 +15,7 @@
 
 .text-input{
   border-bottom: solid 3px #4056A1;
-  
-}
-
-texarea {
-  color: #545149;
+  font-weight: 300;
 }
 
 #tweet-text {
@@ -27,6 +23,15 @@ texarea {
   background: transparent;
   border: none;
   outline: none;
+  color: #545149;
+  font-weight: 600;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+}
+.red-text {
+  color: red;
 }
 
 label {
