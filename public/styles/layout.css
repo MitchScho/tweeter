@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -26,72 +29,74 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
+main {
   width: 90% auto;
   background-color: #f4f1ec;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  
- }
 
- .tweet-container:hover {
-   box-shadow: 6px 6px #acc7ee;
-   
- }
+}
 
- .tweet-container {
+.tweet-container article:hover {
+  box-shadow: 6px 6px #acc7ee;
+
+}
+
+.tweet-container article {
   border: solid 3px #545149;
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 6px;
+}
 
- }
-
- .article-head {
+article header {
   display: flex;
   justify-content: space-between;
   padding: 4px;
   font-weight: 300;
- }
+}
 
- .article-foot {
+.head-image {
+  display: flex;
+  align-items: center;
+}
+
+.handle {
+  color: #acc7ee;
+  font-weight: 600;
+}
+
+p {
+  border-bottom: solid 3px #545149;
+  padding-bottom: 4px;
+  margin-bottom: 0;
+}
+
+article footer {
   display: flex;
   justify-content: space-between;
   padding: 4px;
   font-size: 16px;
   padding-right: 4px;
-  padding-left:4px;
-  
- }
+  padding-left: 4px;
 
- #foot-icon {
+}
+
+.foot-icon {
   display: flex;
   justify-content: flex-end;
-  
- }
 
- p {
-  border-bottom: solid 3px #545149;
-  padding-bottom: 4px;
-  margin-bottom: 0;
- }
+}
 
- #foot-icon i {
+.foot-icon i {
   padding: 4px;
-  color:#4056A1;
- }
+  color: #4056A1;
+}
 
- #foot-icon i:hover {
+.foot-icon i:hover {
   color: goldenrod;
- }
+}
 
- .handle {
-   color:#acc7ee;
-   font-weight: 600;
- }
-
- .icon-name {
-   font-size: 18px;
- }
-
- 
+.icon-name {
+  font-size: 18px;
+}
