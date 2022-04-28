@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -45,38 +46,19 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
+        <form id="tweet-form" method="POST" action="/tweets/">
           <div class="text-input">
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
           </div>
           <div class="tweet-counter">
-            <button id="tag" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <button id="tweet-submit" type="submit">Tweet</button>
+            <output id="counter-value" name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
       <section class="tweet-container">
       </section>
-              
-      <p>I'm baby umami readymade scenester williamsburg keffiyeh subway tile XOXO blue bottle yuccie. Migas before they sold out
-      knausgaard readymade lyft etsy biodiesel glossier. Glossier truffaut jianbing vexillologist. Taxidermy cardigan ethical,
-      direct trade small batch viral live-edge celiac humblebrag lumbersexual helvetica. </p>
-      <h5>Tweet</h5>
-      <br/>
-      <p>Dreamcatcher cardigan messenger bag
-      distillery man bun succulents drinking vinegar pork belly, selfies tumeric. Seitan live-edge gentrify, shoreditch
-      vaporware cronut kombucha master cleanse ennui lomo church-key +1 photo booth gluten-free.</p>
-      <h5>Tweet</h5>
-      <br/>
-      <p>Typewriter chicharrones godard cold-pressed biodiesel plaid try-hard woke schlitz pour-over put a bird on it 3 wolf moon
-      hexagon vice. Mixtape fingerstache fam flannel echo park try-hard pabst tofu tumblr cloud bread iceland readymade
-      gochujang.</p>
-      <h5>Tweet</h5>
-      <br/>
-      <p>Church-key truffaut vegan copper mug. Pabst quinoa kinfolk, vinyl woke irony hella lumbersexual cardigan hammock pop-up
-      kale chips. Semiotics cliche truffaut woke hoodie.</p>
-      <h5>Tweet</h5>
     </main>
   </body>
 </html>

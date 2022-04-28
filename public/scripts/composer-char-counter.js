@@ -1,12 +1,11 @@
 $(document).ready(function () {
-  
   $("#tweet-text").on("input", function (e) {
     let counts = 140 - e.target.value.length;
-    $("output").text(counts);
+    $("#counter-value").text(counts);
     if (counts < 0) {
-      $("output").addClass("red-text");
+      $("#counter-value").addClass("red-text");
     } else {
-      $("output").removeClass("red-text");
+      $("#counter-value").removeClass("red-text");
     }
   });
 
