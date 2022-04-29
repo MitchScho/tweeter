@@ -27,8 +27,14 @@
 //     created_at: 1461113959088,
 //   },
 // ];
+
 // Uses data passed in through tweet parameter and returns html structured data
 const createTweetElement = function (data) {
+  const escape = function (str) {
+    let tweet = document.createElement("tweet");
+    tweet.appendChild(document.createTextNode(str));
+    return tweet.innerHTML;
+  };
   const $tweet = $(`<article>
                       <header>
                         <div class="head-image">
@@ -39,15 +45,15 @@ const createTweetElement = function (data) {
                         </div>            
                         <span class="handle">${data.user.handle}</span>
                       </header>
-                      <p>${data.content.text}</p>
+                      <p>${escape(data.content.text)}</p>
                       <footer>
                         <output class="day-count">${timeago.format(
                           data.created_at
                         )}</output>
                         <div class="foot-icon">
                           <i class="fa fa-flag" aria-hidden="true"></i>
+                          <i class="fa fa-retweet" aria-hidden="true"></i>
                           <i class="fa fa-heart" aria-hidden="true"></i>
-                          <i class="fa fa-bolt" aria-hidden="true"></i>
                         </div>
                       </footer>
                     </article>`);
@@ -59,37 +65,51 @@ const createTweetElement = function (data) {
 //then prepended / rendered to the tweet container
 const renderTweet = function (data) {
   for (const item of data) {
-    $(".tweet-container").prepend(createTweetElement(item));
+    $("#tweet-container").prepend(createTweetElement(item));
   }
 };
 
 $(document).ready(function () {
-  
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
-    console.log("event", event);
+    
     const tweetInput = $("#tweet-text").serialize();
-    console.log("tweet input", tweetInput);
-    if (tweetInput.length > 140) {
-      alert("Sorry you have gone over your character allowance");
-    } else if (tweetInput === " " || tweetInput === null) {
-      alert("Surely you have something to say!");
+    const inputText = $("#tweet-text").val();
+    
+    if (inputText.length > 140) {
+      
+      $("#error").html(`<div class="error-flex">
+                          <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                          <span>! Sorry you have exceeded your character allowance !</span>
+                          <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                        </div>`);
+      $("#error").slideDown();
+      setTimeout(() => { $("#error").slideUp(); }, 1500);
+      
+    } else if (!inputText) {
+      $("#error").html(`<div class="error-flex">
+                          <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                          <span>! Are you sure there isn't anything you want to say? !</span>
+                          <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                        </div>`);
+      $("#error").slideDown();
+      setTimeout(() => { $("#error").slideUp(); }, 1500);
+      
     } else {
+
       $.ajax("/tweets", {
         method: "POST",
         data: tweetInput,
         success: (tweetInput) => {
           renderTweet(tweetInput);
           loadTweets();
-          
+          $(this).trigger("reset");
         },
         error: (error) => {
-          console.log("error", error);
+          
         },
       });
     }
-
-
   });
 
   const loadTweets = function () {
@@ -99,7 +119,7 @@ $(document).ready(function () {
         renderTweet(data);
       },
       error: (error) => {
-        console.log("error", error);
+        
       },
     });
   };

@@ -1,43 +1,90 @@
+@media screen and (max-width: 1023px) {
 
-nav {
-  height: 120px;
-  width: 100%;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 2em;
-  display: flex;
-  justify-content: space-between;
+  nav {
+    height: 100px;
+    width: 100%;
+    color: #FFFFFF;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  .navbar-anchor {
+    top: 0;
+    left: 0;
+    position: fixed;
+  
+  }
+  
+  nav>span {
+    font-family: 'Bungee', cursive;
+    font-size: 40px;
+  
+  }
+  
+  .nav-right {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+  }
+  
+  .icon {
+    height: 50px;
+    color: brown;
+  }
+  
+  #bold {
+    font-weight: 600;
+  }
 
 }
 
-.navbar-anchor {
-  top:0;
-  left:0;
-  position:fixed;
+@media (min-width: 1024px) {
+  nav {
+    height: 100px;
+    width: 100%;
+    background-color: #e46842;
+    color: #FFFFFF;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
 
-}
+  }
 
-nav > span {
-  font-family: 'Bungee', cursive;
-  font-size:40px;
+  .navbar-anchor {
+    top: 0;
+    left: 0;
+    position: fixed;
 
-}
+  }
 
-.nav-right {
-  font-family: 'Source Sans Pro', sans-serif;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  font-weight: 300;
-}
+  nav>span {
+    font-family: 'Bungee', cursive;
+    font-size: 40px;
 
-.icon {
-  height: 50px;
-  color: red;
-}
+  }
 
-#bold {
-  font-weight: 600; 
+  .nav-right {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+  }
+
+  .icon {
+    height: 50px;
+    color: brown;
+  }
+
+  #bold {
+    font-weight: 600;
+  }
 }

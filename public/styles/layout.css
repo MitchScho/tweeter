@@ -13,90 +13,104 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/* Tablet style */
 
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-}
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
-main {
-  width: 90% auto;
-  background-color: #f4f1ec;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+/* Desktop Style */
 
-}
 
-.tweet-container article:hover {
-  box-shadow: 6px 6px #acc7ee;
 
-}
+  body {
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+  }
 
-.tweet-container article {
-  border: solid 3px #545149;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding: 6px;
-}
+  main {
+    width: 100%;
+    background-color: #f4f1ec;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-top: 7em;
 
-article header {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px;
-  font-weight: 300;
-}
+  }
 
-.head-image {
-  display: flex;
-  align-items: center;
-}
+  #tweet-container article:hover {
+    box-shadow: 6px 6px #acc7ee;
 
-.handle {
-  color: #acc7ee;
-  font-weight: 600;
-}
+  }
 
-p {
-  border-bottom: solid 3px #545149;
-  padding-bottom: 4px;
-  margin-bottom: 0;
-}
+  #tweet-container article {
+    border: solid 3px #545149;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 6px;
+  }
 
-article footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px;
-  font-size: 16px;
-  padding-right: 4px;
-  padding-left: 4px;
+  article header {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    font-weight: 300;
+  }
 
-}
+  .head-image {
+    display: flex;
+    align-items: center;
+  }
 
-.foot-icon {
-  display: flex;
-  justify-content: flex-end;
+  .handle {
+    color: #acc7ee;
+    font-weight: 600;
+  }
 
-}
+  p {
+    border-bottom: solid 3px #545149;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+    max-width: 90%
+  }
 
-.foot-icon i {
-  padding: 4px;
-  color: #4056A1;
-}
+  article footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    font-size: 1rem;
+    padding-right: 4px;
+    padding-left: 4px;
 
-.foot-icon i:hover {
-  color: goldenrod;
-}
+  }
 
-.icon-name {
-  font-size: 18px;
-}
+  .foot-icon {
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .foot-icon i {
+    padding: 4px;
+    color: #4056A1;
+  }
+
+  .foot-icon i:hover {
+    color: goldenrod;
+  }
+
+  .icon-name {
+    font-size: 18px;
+  }
+
+
+  @media (min-width: 1024px) {
+
+   body > div {
+     display: flex;
+   }
+
+   main {
+     width: 70%;
+   }
+  }

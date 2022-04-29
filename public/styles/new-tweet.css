@@ -7,7 +7,7 @@
 
 #tweet-submit {
   font-family: 'Bungee', cursive;
-  background-color: #4056A1;
+  background-color: #e46842;
   color: #FFFFFF;
   margin: 0;
   border: none;
@@ -36,4 +36,19 @@
 
 label {
   padding-bottom: 4px
+}
+
+.new-tweet {
+  margin-top: 1%;
+}
+
+.error-flex {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid 3px red;
+  color: red; 
+}
+
+p {
+  word-wrap: break-word;
 }
