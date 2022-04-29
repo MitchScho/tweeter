@@ -22,10 +22,10 @@
 
   .header {
     margin-top: 7em;
-    margin-left: 1em;
-    margin-right: 1vw;
+    margin-left: 3em;
+    margin-right: 10vw;
     height: 350px;
-    width: 45%;
+    width: 30vw;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;

@@ -1,3 +1,5 @@
+
+
 // Uses data passed in through tweet parameter and returns secure html structured data
 const createTweetElement = function (data) {
   const escape = function (str) {
