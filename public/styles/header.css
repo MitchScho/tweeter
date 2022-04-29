@@ -1,5 +1,4 @@
-@media screen and (max-width: 1023px) {
-
+/* Small screen style */
   .header {
     padding-top:10vw;
     height: 450px;
@@ -7,7 +6,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    
     background-color: #d25e2d;
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
   
@@ -19,28 +17,20 @@
     color: #f4f1ec;
   }
 
-}
-
+/* Desktop style modifications */
 @media (min-width: 1024px) {
 
   .header {
     margin-top: 7em;
-    margin-left: 3em;
-    margin-right: 10vw;
+    margin-left: 1em;
+    margin-right: 1vw;
     height: 350px;
-    width: 450px;
+    width: 45%;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
     background-color: #d25e2d;
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-
-  }
-
-  header>div>h2 {
-    margin: 0;
-    padding-bottom: 1rem;
-    color: #f4f1ec;
   }
 }
