@@ -1,8 +1,8 @@
 
 
 // Uses data passed in through tweet parameter and returns secure html structured data
-const createTweetElement = function (data) {
-  const escape = function (str) {
+const createTweetElement = function(data) {
+  const escape = function(str) {
     let tweet = document.createElement("tweet");
     tweet.appendChild(document.createTextNode(str));
     return tweet.innerHTML;
@@ -31,14 +31,14 @@ const createTweetElement = function (data) {
 
 // Loops through data from database. Every item in the database is passed through the create tweet function and
 //then prepended / rendered to the tweet container
-const renderTweet = function (data) {
+const renderTweet = function(data) {
   for (const item of data) {
     $("#tweet-container").prepend(createTweetElement(item));
   }
 };
 
-$(document).ready(function () {
-  $("#tweet-form").submit(function (event) {
+$(document).ready(function() {
+  $("#tweet-form").submit(function(event) {
     event.preventDefault();
     
     const tweetInput = $("#tweet-text").serialize();
@@ -78,7 +78,7 @@ $(document).ready(function () {
     }
   });
 
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax("/tweets", {
       method: "GET",
       success: (data) => {

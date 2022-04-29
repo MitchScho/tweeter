@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $("#tweet-text").on("input", function (e) {
+$(document).ready(function() {
+  $("#tweet-text").on("input", function(e) {
     let counts = 140 - e.target.value.length;
     $("#counter-value").text(counts);
     if (counts < 0) {
