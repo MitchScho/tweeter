@@ -37,8 +37,32 @@
     color: brown;
   }
 
+  @keyframes bounce {
+    0%, 25%, 50%, 75%, 100% {
+      transform: translate(0,0);
+    }
+    15%, 40% {
+      transform: translate(0,-10px);
+    }
+    65%, 80% {
+      transform: translate(0,-5px);
+    }
+    95% {
+      transform: translate(0,-2px);
+    }
+  }
+
+  .icon:hover {
+    animation: bounce 1s linear ;
+  }
+
   #bold {
     font-weight: 600;
+  }
+
+  #write-new-button {
+    background-color: transparent;
+    border: none;
   }
 
   /* Desktop style modifications */
@@ -47,4 +71,7 @@
   nav {
   background-color: #e46842;
   }
+
+  
+
 }

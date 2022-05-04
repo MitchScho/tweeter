@@ -37,7 +37,20 @@ const renderTweet = function(data) {
   }
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
+  $("section.new-tweet").hide();
+  $("#write-new-button").click(function () {
+    const $newTweetForm = $("section.new-tweet")
+    console.log("This is working");
+    if ($newTweetForm.is(":visible")) {
+      $newTweetForm.slideUp("fast");
+    } else {
+      $newTweetForm.slideDown("fast");
+      $newTweetForm.find("textarea").focus();
+    }
+    
+  })
+
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
     
@@ -73,6 +86,7 @@ $(document).ready(function() {
           $(this).trigger("reset");
         },
         error: (error) => {
+          console.log("eror", error);
         },
       });
     }
@@ -83,8 +97,6 @@ $(document).ready(function() {
       method: "GET",
       success: (data) => {
         renderTweet(data);
-      },
-      error: (error) => { 
       },
     });
   };

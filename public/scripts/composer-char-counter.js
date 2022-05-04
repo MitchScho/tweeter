@@ -1,11 +1,15 @@
-$(document).ready(function() {
-  $("#tweet-text").on("input", function(e) {
-    let counts = 140 - e.target.value.length;
-    $("#counter-value").text(counts);
-    if (counts < 0) {
-      $("#counter-value").addClass("red-text");
-    } else {
-      $("#counter-value").removeClass("red-text");
-    }
-  });
+$(document).ready(function () {
+  $("#tweet-text").on("input", onInput);
 });
+
+const onInput = function (e) {
+    
+    let charCount = 140 - e.target.value.length;
+    const $counter = $("#counter-value");
+    $counter.text(charCount);
+
+    if (charCount < 0) {
+      return $counter.addClass("red-text");
+    }
+    $counter.removeClass("red-text");
+  };
